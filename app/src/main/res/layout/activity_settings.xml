@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <EditText
+            android:id="@+id/urlField1"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL1"  />
+
+        <EditText
+            android:id="@+id/urlField2"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL2" />
+
+        <EditText
+            android:id="@+id/urlField3"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL3" />
+
+        <EditText
+            android:id="@+id/urlField4"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL4" />
+
+        <EditText
+            android:id="@+id/urlField5"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL5" />
+
+        <EditText
+            android:id="@+id/urlField6"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL6" />
+        <EditText
+            android:id="@+id/urlField7"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL7" />
+        <EditText
+            android:id="@+id/urlField8"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <EditText
+            android:id="@+id/urlField9"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL9" />
+
+        <EditText
+            android:id="@+id/urlField10"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL10" />
+
+        <EditText
+            android:id="@+id/urlField11"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL11" />
+
+        <EditText
+            android:id="@+id/urlField12"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL12" />
+
+        <EditText
+            android:id="@+id/urlField13"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL13" />
+
+        <EditText
+            android:id="@+id/urlField14"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL14" />
+        <EditText
+            android:id="@+id/urlField15"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL15" />
+        <EditText
+            android:id="@+id/urlField16"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="URL16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/doneBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Save &amp; Start">
+        </Button>
+    </LinearLayout>
+
+
+</LinearLayout>
