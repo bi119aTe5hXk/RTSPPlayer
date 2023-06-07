@@ -20,6 +20,7 @@ import java.util.TreeSet;
 
 public class SettingsActivity extends AppCompatActivity{
     private static SharedPreferences sharedPref;
+    private static ArrayList<TextView> tfViewsList =new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +30,23 @@ public class SettingsActivity extends AppCompatActivity{
         sharedPref = getSharedPreferences("appPref", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
-        TextView urlTextF1 = findViewById(R.id.urlField1);
-        TextView urlTextF2 = findViewById(R.id.urlField2);
-        TextView urlTextF3 = findViewById(R.id.urlField3);
-        TextView urlTextF4 = findViewById(R.id.urlField4);
-        TextView urlTextF5 = findViewById(R.id.urlField5);
-        TextView urlTextF6 = findViewById(R.id.urlField6);
-        TextView urlTextF7 = findViewById(R.id.urlField7);
-        TextView urlTextF8 = findViewById(R.id.urlField8);
-        TextView urlTextF9 = findViewById(R.id.urlField9);
-        TextView urlTextF10 = findViewById(R.id.urlField10);
-        TextView urlTextF11 = findViewById(R.id.urlField11);
-        TextView urlTextF12 = findViewById(R.id.urlField12);
-        TextView urlTextF13 = findViewById(R.id.urlField13);
-        TextView urlTextF14 = findViewById(R.id.urlField14);
-        TextView urlTextF15 = findViewById(R.id.urlField15);
-        TextView urlTextF16 = findViewById(R.id.urlField16);
+        tfViewsList.add(findViewById(R.id.urlField1));
+        tfViewsList.add(findViewById(R.id.urlField2));
+        tfViewsList.add(findViewById(R.id.urlField3));
+        tfViewsList.add(findViewById(R.id.urlField4));
+        tfViewsList.add(findViewById(R.id.urlField5));
+        tfViewsList.add(findViewById(R.id.urlField6));
+        tfViewsList.add(findViewById(R.id.urlField7));
+        tfViewsList.add(findViewById(R.id.urlField8));
+        tfViewsList.add(findViewById(R.id.urlField9));
+        tfViewsList.add(findViewById(R.id.urlField10));
+        tfViewsList.add(findViewById(R.id.urlField11));
+        tfViewsList.add(findViewById(R.id.urlField12));
+        tfViewsList.add(findViewById(R.id.urlField13));
+        tfViewsList.add(findViewById(R.id.urlField14));
+        tfViewsList.add(findViewById(R.id.urlField15));
+        tfViewsList.add(findViewById(R.id.urlField16));
+
 
         Set<String> urlArrSetR = sharedPref.getStringSet("urlArrSet",new HashSet<String>());
         List<String> list = new ArrayList<String>(urlArrSetR);
@@ -55,23 +57,10 @@ public class SettingsActivity extends AppCompatActivity{
             urlStrArr[i] = str;
             i++;
         }
+        for (int j = 0; j < urlStrArr.length; j++) {
+            tfViewsList.get(j).setText(urlStrArr[j]);
+        }
 
-        urlTextF1.setText(urlStrArr[0]);
-        urlTextF2.setText(urlStrArr[1]);
-        urlTextF3.setText(urlStrArr[2]);
-        urlTextF4.setText(urlStrArr[3]);
-        urlTextF5.setText(urlStrArr[4]);
-        urlTextF6.setText(urlStrArr[5]);
-        urlTextF7.setText(urlStrArr[6]);
-        urlTextF8.setText(urlStrArr[7]);
-        urlTextF9.setText(urlStrArr[8]);
-        urlTextF10.setText(urlStrArr[9]);
-        urlTextF11.setText(urlStrArr[10]);
-        urlTextF12.setText(urlStrArr[11]);
-        urlTextF13.setText(urlStrArr[12]);
-        urlTextF14.setText(urlStrArr[13]);
-        urlTextF15.setText(urlStrArr[14]);
-        urlTextF16.setText(urlStrArr[15]);
 
 
         Button button = (Button) findViewById(R.id.doneBTN);
@@ -81,22 +70,10 @@ public class SettingsActivity extends AppCompatActivity{
 
                 TreeSet<String> urlArrSet = new TreeSet<String>();
 
-                urlArrSet.add(urlTextF1.getText().toString().trim());
-                urlArrSet.add(urlTextF2.getText().toString().trim());
-                urlArrSet.add(urlTextF3.getText().toString().trim());
-                urlArrSet.add(urlTextF4.getText().toString().trim());
-                urlArrSet.add(urlTextF5.getText().toString().trim());
-                urlArrSet.add(urlTextF6.getText().toString().trim());
-                urlArrSet.add(urlTextF7.getText().toString().trim());
-                urlArrSet.add(urlTextF8.getText().toString().trim());
-                urlArrSet.add(urlTextF9.getText().toString().trim());
-                urlArrSet.add(urlTextF10.getText().toString().trim());
-                urlArrSet.add(urlTextF11.getText().toString().trim());
-                urlArrSet.add(urlTextF12.getText().toString().trim());
-                urlArrSet.add(urlTextF13.getText().toString().trim());
-                urlArrSet.add(urlTextF14.getText().toString().trim());
-                urlArrSet.add(urlTextF15.getText().toString().trim());
-                urlArrSet.add(urlTextF16.getText().toString().trim());
+                for (int j = 0; j < urlStrArr.length; j++) {
+                    urlArrSet.add(tfViewsList.get(j).getText().toString().trim());
+                }
+
                 if (urlArrSet.contains("")){
                     urlArrSet.remove("");
                 }
